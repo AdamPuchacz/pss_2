@@ -1,0 +1,69 @@
+{% extends "main.html" %}
+
+{% block footer %} przykładowa tresć stopki wpisana do szablonu głównego z szablonu kalkulatora {% endblock %}
+
+{% block content %}
+
+<h2 class="content-head is-center">Kalkulator kredytowy</h2>
+
+<div class="pure-g">
+<div class="l-box-lrg pure-u-1 pure-u-med-2-5">
+	<form class="pure-form pure-form-stacked" action="{{app_url}}/app/calc.php" method="post">
+		<fieldset>
+
+			<label for="id_x">Kwota kredytu:</label>
+			<input id="id_x" type="text" placeholder="Kwota kredytu" name="kwota" value="{{kwota}}">
+
+			<label for="id_proc">Na jaki procent:</label>
+			<input id="id_proc" type="text" placeholder="Na jaki procent" name="procent" value="{{procent}}">
+
+			<label for="id_y">Na ile lat: </label>
+			<input id="id_y" type="text" placeholder="Na ile lat" name="lata" value="{{lata}}">
+			
+
+			<button type="submit" class="pure-button">Oblicz ratę</button>
+		</fieldset>
+	</form>
+</div>
+
+<div class="l-box-lrg pure-u-1 pure-u-med-3-5">
+
+{# wyświeltenie listy błędów, jeśli istnieją #}
+{% if messages is defined %}
+	{% if messages|length > 0 %} 
+		{% spaceless %}
+		<h4>Wystąpiły błędy: </h4>
+		<ol class="err">
+		{% for msg in messages %}
+			<li>{{ msg }}</li>
+		{% endfor %}
+		</ol>
+		{% endspaceless %}
+	{% endif %}
+{% endif %}
+
+{# wyświeltenie listy informacji, jeśli istnieją #}
+{% if infos is defined %}
+	{% if infos|length > 0 %} 
+		{% spaceless %}
+		<h4>Wystąpiły informacje: </h4>
+		<ol class="inf">
+		{% for msg in infos %}
+			<li>{{ msg }}</li>
+		{% endfor %}
+		</ol>
+		{% endspaceless %}
+	{% endif %}
+{% endif %}
+
+{% if result is defined %}
+	<h4>Miesięczna rata :</h4>
+	<p class="res">
+	{{result}}
+	</p>
+{% endif %}
+
+</div>
+</div>
+
+{% endblock %}
