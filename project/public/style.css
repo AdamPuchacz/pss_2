@@ -1,0 +1,122 @@
+body {
+    background: #e0e0e0;
+    padding: 0;
+    margin: 0;
+}
+
+button {
+    outline: none;
+    border: 1px solid #000;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    text-align: center;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin: 0;
+}
+
+header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #000;
+}
+
+.header-wrap {
+    width: 80%;
+}
+
+.logo-wrap {
+    display: flex;
+    align-items: center;
+}
+
+.main-wrap {
+    display: grid;
+    grid-template-columns: 1fr .17fr;
+    height: calc(100vh - 20vh);
+}
+
+.sidebar-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    padding: 1em;
+    border-left: 1px solid #000;
+}
+
+.sidebar-wrap a {
+    background: #fff;
+    padding: .5em;
+    border: 1px solid #000;
+}
+
+.sidebar-wrap a:hover {
+    background: rgb(233, 233, 233);
+}
+
+.content-wrap {
+    padding: 2em 2em 2em 13em;
+}
+
+footer {
+    height: 5vh;
+    padding: 1em;
+    border-top: 1px solid #000;
+}
+
+.content-wrap h1 {
+    margin-bottom: .5em;
+}
+
+.hp-actionBtn-wrap,
+.banner-wrap {
+    width: 1100px;
+}
+
+.banner-wrap {
+    height: 350px;
+    background: #000;
+}
+
+.hp-actionBtn-wrap {
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 1em;
+}
+
+.hp-actionBtn {
+    padding: .5em 3em;
+    cursor: pointer;
+    background-color: rgb(34, 118, 228);
+    font-size: .9rem;
+}
+
+#enterData {
+    display: none;
+}
+
+#reservationForm input.error {
+    border: 1px solid red;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+}
