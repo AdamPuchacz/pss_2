@@ -1,1 +1,2 @@
 Paginacja - KatalogCtrl.class.php oraz widok Katalog.tpl
+AJAX - nowa ścieżka w routingu, nowy plik listing.js, nowy kontroler ListingApiCtrl.class.php
