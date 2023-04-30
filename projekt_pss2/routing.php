@@ -20,4 +20,5 @@ Utils::addRouteEx('zaloguj', null, 'loginCtrl', 'zaloguj');
 Utils::addRouteEx('wyloguj', null, 'loginCtrl', 'wyloguj');
 Utils::addRoute('rezerwacje', 'mojeRezerwacjeCtrl');
 Utils::addRoute('wszystkierezerwacje', 'wszystkieRezCtrl');
+Utils::addRoute('api_listing', 'ListingApiCtrl');
 //Utils::addRoute('action_name', 'controller_class_name');
